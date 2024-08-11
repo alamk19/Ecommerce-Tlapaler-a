@@ -1,0 +1,210 @@
+create database clavito;
+
+use clavito;
+
+-------------------------------------------------------------------------------------------------------------------
+create table producto(
+id int not null primary key auto_increment,
+nombre varchar(100) not null,
+categoria varchar(50) not null,
+precio double not null,
+marca varchar(50),
+tipo varchar(50),
+color varchar(100),
+capacidad varchar(20),
+tamano varchar(20),
+peso varchar(20))ENGINE=INNODB;
+
+insert into producto values(1, 'Pintura', 'Pinturas', 560, 'Comex','Vinimex','Amarillo Nectar','4L','','');
+insert into producto values(2, 'Pintura', 'Pinturas', 560, 'Comex','Vinimex','Morado Anastasia','4L','','');
+insert into producto values(3, 'Pintura', 'Pinturas', 560, 'Comex','Vinimex','Naranja Baston','4L','','');
+insert into producto values(4, 'Pintura', 'Pinturas', 560, 'Comex','Vinimex','Cafe Pabellon','4L','','');
+insert into producto values(5, 'Pintura', 'Pinturas', 560, 'Comex','Vinimex','Rosa Helado','4L','','');
+insert into producto values(6, 'Pintura', 'Pinturas', 560, 'Comex','Vinimex','Rojo Crayon','4L','','');
+insert into producto values(7, 'Pintura', 'Pinturas', 560, 'Comex','Vinimex','Azul Latitud','4L','','');
+insert into producto values(8, 'Pintura', 'Pinturas', 560, 'Comex','Vinimex','Negro Obsidiana','4L','','');
+insert into producto values(9, 'Pintura', 'Pinturas', 560, 'Comex','Vinimex','Azul Cumbre','4L','','');
+insert into producto values(10, 'Pintura', 'Pinturas', 560, 'Comex','Vinimex','Verde Botica','4L','','');
+insert into producto values(11, 'Pintura', 'Pinturas', 350, 'Comex','Pro 1000','Blanco Anilina','4L','','');
+insert into producto values(12, 'Pintura', 'Pinturas', 350, 'Comex','Pro 1000','Amarillo Afan','4L','','');
+insert into producto values(13, 'Pintura', 'Pinturas', 350, 'Comex','Pro 1000','Naranja Delta','4L','','');
+insert into producto values(14, 'Pintura', 'Pinturas', 350, 'Comex','Pro 1000','Rojo Infanta','4L','','');
+insert into producto values(15, 'Pintura', 'Pinturas', 350, 'Comex','Pro 1000','Rosa Armonia','4L','','');
+insert into producto values(16, 'Pintura', 'Pinturas', 350, 'Comex','Pro 1000','Morado Almudena','4L','','');
+insert into producto values(17, 'Pintura', 'Pinturas', 350, 'Comex','Pro 1000','Morado Niyama','4L','','');
+insert into producto values(18, 'Pintura', 'Pinturas', 350, 'Comex','Pro 1000','Azul Atmosfera','4L','','');
+insert into producto values(19, 'Pintura', 'Pinturas', 350, 'Comex','Pro 1000','Verde Pacifico','4L','','');
+insert into producto values(20, 'Pintura', 'Pinturas', 350, 'Comex','Pro 1000','Verde Bambu','4L','','');
+insert into producto values(21, 'Esmalte', 'Pinturas', 750, 'Comex','Acqua 100','Tea Tree','4L','','');
+insert into producto values(22, 'Esmalte', 'Pinturas', 750, 'Comex','Acqua 100','Equipal','4L','','');
+insert into producto values(23, 'Esmalte', 'Pinturas', 750, 'Comex','Acqua 100','Moroni','4L','','');
+insert into producto values(24, 'Esmalte', 'Pinturas', 750, 'Comex','Acqua 100','Heroe','4L','','');
+insert into producto values(25, 'Esmalte', 'Pinturas', 750, 'Comex','Acqua 100','Isis','4L','','');
+insert into producto values(26, 'Esmalte', 'Pinturas', 750, 'Comex','Acqua 100','Vegetal','4L','','');
+insert into producto values(27, 'Esmalte', 'Pinturas', 750, 'Comex','Acqua 100','Tempestad','4L','','');
+insert into producto values(28, 'Esmalte', 'Pinturas', 750, 'Comex','Acqua 100','Encanto Arabigo','4L','','');
+insert into producto values(29, 'Esmalte', 'Pinturas', 750, 'Comex','Acqua 100','Bufon','4L','','');
+insert into producto values(30, 'Esmalte', 'Pinturas', 750, 'Comex','Acqua 100','Nectarina','4L','','');
+insert into producto values(31, 'Brocha', 'Accesorios',40, 'Comex','Clasica','','','','');
+insert into producto values(32, 'Brocha', 'Accesorios', 80, 'Comex','Linea Azul','','','','');
+insert into producto values(33, 'Brocha', 'Accesorios', 130, 'Comex','Pelo Camello','','','','');
+insert into producto values(34, 'Rodillo', 'Accesorios', 35, 'Comex','Liso','','','','');
+insert into producto values(35, 'Rodillo', 'Accesorios', 50, 'Comex','Microfibra','','','','');
+insert into producto values(36, 'Maneral', 'Accesorios', 45, 'Comex','','','','','');
+insert into producto values(37, 'Cinta', 'Accesorios', 80, 'Scotch Blue','Original','','','','');
+insert into producto values(38, 'Cinta', 'Accesorios', 100, 'Scotch Blue','Multi','','','','');
+insert into producto values(39, 'Sellador', 'Accesorios', 90, 'Comex','Acrilico','Blanco','','','');
+insert into producto values(40, 'Sellador', 'Accesorios', 85, 'Comex','Acrilico','Transparente','','','');
+insert into producto values(41, 'Sellador', 'Accesorios', 190, 'Comex','Poliuretano','','','','');
+insert into producto values(42, 'Thinner', 'Accesorios', 45, 'Comex','Estandar','','960ml','','');
+insert into producto values(43, 'Cemento', 'Materiales', 180, 'Tolteca','Gris','','','','50kg');
+
+
+create table empleado(
+id int not null primary key auto_increment,
+nombre varchar(100) not null,
+apellido varchar(100) not null,
+direccion varchar(100) not null,
+telefono varchar(30),
+fContratacion varchar(30),
+pago double not null)ENGINE=INNODB;
+
+insert into empleado values(100, 'JULIO CESAR', 'FLORES DE PAZ', 'VILLAS, ZARAGOZA','5583671329','20/10/2020',1200);
+insert into empleado values(101, 'ELIZABET', 'CRUZ JACOME', 'ARBOLEDAS, ZARAGOZA','5565736355','19/11/2020',1200);
+insert into empleado values(102, 'ANGEL', 'VEGA ZAMBRANO', 'GUERRERO, ZARAGOZA','5587334020','25/11/2020',1200);
+insert into empleado values(103, 'ANA KAREN', 'BECERRIL ROMERO', 'CAMP, ZARAGOZA','5509399314','19/11/2019',1200);
+insert into empleado values(104, 'BERNARDINO', 'PEREZ GALICIA', 'JUAREZ, ZARAGOZA','', '',2000);
+
+create table cliente(
+id int not null primary key auto_increment,
+nombre varchar(100),
+apellido varchar(100),
+telefono varchar(30)) ENGINE=INNODB;
+
+insert into cliente values(1919, 'Alam','k19', '5576384111');
+insert into cliente values(1920, 'Martin','','');
+insert into cliente values(1921, 'Leonardo','','');
+insert into cliente values(1922, 'Luis','','');
+insert into cliente values(1923, 'Gloria','','');
+
+create table proveedor(
+id int not null primary key auto_increment,
+nombre varchar(100) not null,
+telefono varchar (30) not null) ENGINE=INNODB;
+
+insert into proveedor values(777, 'Comex', '5536373638');
+insert into proveedor values(778, 'Cemex', '5524246266');
+insert into proveedor values(779, 'Penitas', '5572687272');
+insert into proveedor values(780, 'Truper', '5527627282');
+insert into proveedor values(781, 'Vallejo', '5526276527');
+
+
+create table venta(
+id int not null primary key auto_increment,
+fecha varchar(30) not null,
+cantidad int not null,
+precio double not null,
+idProducto int not null,
+foreign key(idProducto)
+references producto(id)
+on delete cascade,
+idCliente int not null,
+foreign key (idCliente)
+references cliente(id)
+on delete cascade,
+idEmpleado int not null,
+foreign key(idEmpleado)
+references empleado(id)
+on delete cascade)ENGINE=INNODB;
+
+insert into venta values(2001, '09/10/2021', 1, 560, 1, 1919, 100);
+insert into venta values(2002, '09/10/2021', 1, 350, 11, 1920, 101);
+insert into venta values(2003, '09/10/2021', 1, 750, 21, 1921, 102);
+insert into venta values(2004, '09/10/2021', 1, 40, 31, 1922, 100);
+insert into venta values(2005, '10/10/2021', 1, 180, 43, 1923, 104);
+
+
+create table inventario(
+id int not null primary key auto_increment,
+existencias int not null,
+idProducto int not null,
+foreign key(idProducto)
+references producto(id)
+on delete cascade,
+idEmpleado int not null,
+foreign key(idEmpleado)
+references empleado(id)
+on delete cascade)ENGINE=INNODB;
+
+insert into inventario values(51, 20, 1, 100);
+insert into inventario values(52, 15, 11, 100);
+insert into inventario values(53, 25, 21, 101);
+insert into inventario values(54, 30, 31, 100);
+insert into inventario values(55, 15, 43, 100);
+
+
+create table almacen(
+id int not null primary key auto_increment,
+cantidad int not null,
+fechaIngreso varchar(30) not null,
+fechaEgreso varchar(30),
+idProducto int not null,
+foreign key(idProducto)
+references producto(id)
+on delete cascade,
+idEmpleado int not null,
+foreign key(idEmpleado)
+references empleado(id)
+on delete cascade)ENGINE=INNODB;
+
+insert into almacen values(1, 10, '29/08/2021','09/10/2021', 1, 100);
+insert into almacen values(2, 20,'29/08/2021', '09/10/2021', 11, 101);
+insert into almacen values(3, 10, '29/08/2021', '', 21, 102);
+insert into almacen values(4, 15, '29/08/2021', '09/10/2021', 31, 100);
+insert into almacen values(5, 7, '30/08/2021', '09/10/2021', 43, 104);
+
+
+create table pedido(
+id int not null primary key auto_increment,
+cantidad int not null,
+costo double not null,
+fecha varchar(30) not null,
+fechaEntrega varchar(30),
+idProducto int not null,
+foreign key(idProducto)
+references producto(id)
+on delete cascade,
+idEmpleado int not null,
+foreign key(idEmpleado)
+references empleado(id)
+on delete cascade,
+idProveedor int not null,
+foreign key (idProveedor)
+references proveedor(id)
+on delete cascade)ENGINE=INNODB;
+
+insert into pedido values(201, 10, 4500, '19/05/2021', '', 1, 100, 777);
+insert into pedido values(202, 10, 2500, '19/06/2021', '', 11, 101, 777);
+insert into pedido values(203, 10, 6000, '19/07/2021', '', 21, 102, 777);
+insert into pedido values(204, 15, 500, '19/08/2021', '29/08/2021', 31, 103, 777);
+insert into pedido values(205, 20, 2500, '19/09/2021', '', 43, 104, 778);
+
+
+create table usuario(
+id int not null primary key auto_increment,
+nombre varchar(50) not null,
+password varchar (250) not null) ENGINE=INNODB;
+
+insert into usuario values(NULL, 'user', '123');
+insert into usuario values(NULL, 'admin', '123');
+
+create table rol(
+id int not null primary key auto_increment,
+nombre varchar(50) not null,
+idUsuario int not null,
+foreign key (idUsuario)
+references usuario(id)
+on delete cascade)ENGINE=INNODB;
+
+insert into rol values (NULL,'user', 1);
+insert into rol values (NULL,'admin', 2);

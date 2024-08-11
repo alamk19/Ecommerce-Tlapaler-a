@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+<meta charset="ISO-8859-1">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<style>
+	body{ background-color: #2b2b2b; 
+		color: #FFFF; }
+	</style>
+<title>Pedido</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-light">
+  <a class="navbar-brand text-dark" th:href="@{/administrador}">Tlapalería Clavito</a>
+</nav>
+<h1 align="center">Pedido</h1>
+<a class="btn btn-outline-warning" sec:authorize="hasRole('ROLE_ADMIN')" th:href="@{/agregarPed}">Insertar</a>
+<div th:if="${pedidos!=null and !pedidos.empty}">
+<table class="table table-secondary table-striped table-bordered border border-secondary">
+<tr>
+<th>ID</th>
+<th>CANTIDAD</th>
+<th>COSTO</th>
+<th>FECHA</th>
+<th>FECHA ENTREGA</th>
+<th>ID PRODUCTO</th>
+<th>ID EMPLEADO</th>
+<th>ID PROVEEDOR</th>
+<th sec:authorize="hasRole('ROLE_ADMIN')">Editar</th>
+<th sec:authorize="hasRole('ROLE_ADMIN')">Eliminar</th>
+</tr>
+<tr th:each="pedido: ${pedidos}">
+<td th:text="${pedido.id}"></td>
+<td th:text="${pedido.cantidad}"></td>
+<td th:text="${pedido.costo}"></td>
+<td th:text="${pedido.fecha}"></td>
+<td th:text="${pedido.fechaEntrega}"></td>
+<td th:text="${pedido.idProducto}"></td>
+<td th:text="${pedido.idEmpleado}"></td>
+<td th:text="${pedido.idProveedor}"></td>
+<td sec:authorize="hasRole('ROLE_ADMIN')"><a class="text-success" th:href="@{/editarPed/}+${pedido.id}">Editar</a></td>
+<td sec:authorize="hasRole('ROLE_ADMIN')"><a class="text-danger" th:href="@{/eliminarPed/}+${pedido.id}">Eliminar</a></td>
+</tr>
+</table>
+</div>
+<div th:if="${pedidos==null or pedidos.empty}">
+<h1>La lista esta vacia. Por favor Recarga-</h1>
+</div>
+<footer>
+<form method="POST" th:action="@{/logout}">
+<a class="btn btn-outline-light" href="#" onclick="this.parentNode.submit();">Salir</a>
+</form>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
